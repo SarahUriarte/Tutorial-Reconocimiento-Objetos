@@ -30,7 +30,7 @@ computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredenti
 
 
 def describir_imagenes():
-    imagen = open('living2.jpg', 'rb')
+    imagen = open('images/living2.jpg', 'rb')
     '''
     Describe las imágenes con un cierto nivel de porcentaje
 
@@ -52,11 +52,11 @@ def describir_imagenes():
 
 
 def categorias_imagenes():
-    imagen = open('living2.jpg', 'rb')
+    imagen = open('images/living2.jpg', 'rb')
     '''
     Detecta los objetos de una imagen
     '''
-    print("===== Detect Objects - remote =====")
+    
     # Get URL image with different objects
 
     # Call API with URL
@@ -65,7 +65,7 @@ def categorias_imagenes():
 
     # Print detected objects results with bounding boxes
     print("Detecting objects in remote image:")
-    image = Image.open('living2.jpg')
+    image = Image.open('images/living2.jpg')
     dibujar = ImageDraw.Draw(image)
     if len(objetos_detectados.objects) == 0:
         print("No objects detected.")
